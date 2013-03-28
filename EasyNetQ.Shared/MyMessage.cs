@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace EasyNetQ.Shared
+namespace EasyNetQTest.Shared
 {
-	public class Message
+	public class MyMessage
 	{
 		public string Text { get; set; }
 		public int RandomNumber { get; set; }

@@ -1,7 +1,8 @@
 ﻿using System;
-using EasyNetQ.Shared;
+using EasyNetQ;
+using EasyNetQTest.Shared;
 
-namespace EasyNetQ.Subscriber
+namespace EasyNetQTest.Subscriber
 {
 	class Program
 	{
@@ -9,7 +10,7 @@ namespace EasyNetQ.Subscriber
 		{
 			using (var bus = RabbitHutch.CreateBus("host=localhost"))
 			{
-				bus.Subscribe<Message>("test", m => Console.WriteLine(string.Format("Text: {0}, RandomNumber: {1}, Date: {2}", m.Text, m.RandomNumber, m.Date)));
+				bus.Subscribe<MyMessage>("test", m => Console.WriteLine(string.Format("Text: {0}, RandomNumber: {1}, Date: {2}", m.Text, m.RandomNumber, m.Date)));
 				
 				Console.WriteLine("Press <ENTER> to exit...");
 				Console.ReadLine();

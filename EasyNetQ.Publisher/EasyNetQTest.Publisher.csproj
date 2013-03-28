@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{A256B91B-FF0F-4A1D-BED2-0440918E3A13}</ProjectGuid>
+    <ProjectGuid>{217E6215-C694-4088-86B2-3095C962F092}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>EasyNetQ.Subscriber</RootNamespace>
-    <AssemblyName>EasyNetQ.Subscriber</AssemblyName>
+    <RootNamespace>EasyNetQ.Publisher</RootNamespace>
+    <AssemblyName>EasyNetQ.Publisher</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
@@ -61,9 +61,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\EasyNetQ.Shared\EasyNetQ.Shared.csproj">
+    <ProjectReference Include="..\EasyNetQ.Shared\EasyNetQTest.Shared.csproj">
       <Project>{f9494557-c097-4e41-b6be-5366bd35b348}</Project>
-      <Name>EasyNetQ.Shared</Name>
+      <Name>EasyNetQTest.Shared</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Threading;
-using EasyNetQ.Shared;
+using EasyNetQ;
+using EasyNetQTest.Shared;
 
-namespace EasyNetQ.Publisher
+namespace EasyNetQTest.Publisher
 {
 	class Program
 	{
@@ -12,7 +13,7 @@ namespace EasyNetQ.Publisher
 			{
 				for (var i = 0; i < 1500; i++)
 				{
-					var message = new Message { Text = "Hello World", RandomNumber = new Random().Next(1, 100), Date = DateTime.Now };
+					var message = new MyMessage { Text = "Hello World", RandomNumber = new Random().Next(1, 100), Date = DateTime.Now };
 					
 					using (var channel = bus.OpenPublishChannel())
 					{
