@@ -16,6 +16,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{734BB9
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyNetQTest.Service.Subscriber", "EasyNetQ.Service.Subscriber\EasyNetQTest.Service.Subscriber.csproj", "{8288834A-ACE7-43FF-8607-E8E6BD8DC1CA}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{6F776B3B-DF84-419D-B45A-28E4AC2FB563}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Apps", "Apps", "{BF163BBE-51E4-4199-AEC0-F17FB6E11A54}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{411B03CF-0DB5-4E0B-B45B-5CF3DCA19F0D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -41,5 +47,11 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{8288834A-ACE7-43FF-8607-E8E6BD8DC1CA} = {6F776B3B-DF84-419D-B45A-28E4AC2FB563}
+		{A256B91B-FF0F-4A1D-BED2-0440918E3A13} = {BF163BBE-51E4-4199-AEC0-F17FB6E11A54}
+		{217E6215-C694-4088-86B2-3095C962F092} = {BF163BBE-51E4-4199-AEC0-F17FB6E11A54}
+		{F9494557-C097-4E41-B6BE-5366BD35B348} = {411B03CF-0DB5-4E0B-B45B-5CF3DCA19F0D}
 	EndGlobalSection
 EndGlobal
