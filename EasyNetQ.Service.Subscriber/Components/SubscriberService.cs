@@ -1,13 +1,13 @@
-﻿using System;
-using System.IO;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using EasyNetQ;
 using EasyNetQTest.Shared;
+using NLog;
 
 namespace EasyNetQTest.Service.Subscriber
 {
     public class SubscriberService : ISubscriberService
     {
+        private static readonly Logger _logger = LogManager.GetCurrentClassLogger();
         private readonly IBus _bus;
         private readonly TaskFactory _taskFactory = new TaskFactory();
 
@@ -32,9 +32,7 @@ namespace EasyNetQTest.Service.Subscriber
         private void ProcessMessage(MyMessage msg)
         {
             var line = string.Format("Got message -- Text: {0}, Number: {1}, Date: {2}", msg.Text, msg.RandomNumber, msg.Date);
-
-            File.AppendAllText(@"E:\Test.txt", line);
-            Console.WriteLine(line);
+            _logger.Debug(line);
         }
     }
 }
